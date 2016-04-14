@@ -97,15 +97,6 @@ func (session *Session) IsAutoCommit() bool {
 	return session.fc.Status()&uint16(StatusInAutocommit) > 0
 }
 
-func (session *Session) checkDB() error {
-
-	if session.cluster == nil {
-		return NewDefaultError(ER_NO_DB_ERROR)
-	}
-
-	return nil
-}
-
 func (session *Session) WriteRows(rs *sql.Rows) error {
 	var cols []driver.RawPacket
 	var err error

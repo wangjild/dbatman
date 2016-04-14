@@ -30,6 +30,7 @@ func TestConn_DeleteTable(t *testing.T) {
 	c.Close()
 }
 
+<<<<<<< HEAD
 func TestConn_CreateTable(t *testing.T) {
 	s := ``
 
@@ -46,6 +47,8 @@ func TestConn_CreateTable(t *testing.T) {
 		t.Fatal(err)
 	}
 }
+=======
+>>>>>>> acc851498735b0da678d99a1c831bf805d69d98b
 
 func TestConn_Insert(t *testing.T) {
 	s := `insert into go_proxy_test_proxy_conn (id, str, f, e, u, i) values(1, "abc", 3.14, "test1", 255, -127)`
